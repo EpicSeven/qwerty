@@ -1,9 +1,9 @@
 /** @format */
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import Login from './components/Login';
-import {name as appName} from './app.json';
+import { AppRegistry } from "react-native";
+import App from "./App";
+import Login from "./components/Login";
+import { name as appName } from "./app.json";
+import splash from "./components/Splash";
 
-
-AppRegistry.registerComponent('qwerty', () => Login);
+AppRegistry.registerComponent("qwerty", () => Login);

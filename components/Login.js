@@ -17,8 +17,10 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{ flex: 1, justifyContent: "flex-start" }} />
-        <Image source={require("../image/logo.png")} />
+        <StatusBar barStyle="light-content" backgroundColor="rgb(32, 53, 70)" />
+        <Image style={styles.image} source={require("../image/logo.png")} />
+        <Text style={styles.text}> Give you choice </Text>
+        <View style={styles.infoContainer} />
       </View>
     );
   }
@@ -27,15 +29,28 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "rgb(32, 53, 70)",
     flex: 1,
-    flexDirection: "column"
-  },
-  logoContainer: {
-    flex: 1,
-    alignSelf: "center",
+    flexDirection: "column",
+    alignItems: "center",
     justifyContent: "center"
   },
-  logo: {
+  image: {
     height: 100,
     width: 100
+  },
+  text: {
+    color: "#ffffff",
+    fontSize: 18,
+    textAlign: "center",
+    marginTop: 5,
+    opacity: 0.9
+  },
+  infoContainer: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: 200,
+    padding: 20,
+    backgroundColor: "red"
   }
 });
