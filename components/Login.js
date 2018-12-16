@@ -16,24 +16,39 @@ import {
 export default class Login extends Component {
   render() {
     return (
+      // <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor="rgb(32, 53, 70)" />
-        <Image style={styles.image} source={require("../image/logo.png")} />
+        <Image style={styles.logo} source={require("../image/logo.png")} />
         <Text style={styles.text}> Give you choice </Text>
-        <View style={styles.infoContainer} />
+        <View style={styles.infoContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Login"
+            placeholderTextColor="white"
+            keyboardType="email-address"
+            returnKeyType="next"
+          />
+        </View>
       </View>
+      // </SafeAreaView>
     );
   }
 }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgb(32, 53, 70)",
     flex: 1,
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: "rgb(32, 53, 70)"
+
+    //alignItems: "center",
+    //justifyContent: "center"
   },
-  image: {
+  logo: {
+    flexDirection: "column",
+    //flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
     height: 100,
     width: 100
   },
@@ -50,7 +65,14 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     height: 200,
-    padding: 20,
-    backgroundColor: "red"
+    padding: 20
+    // backgroundColor: "red"
+  },
+  input: {
+    height: 40,
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start"
   }
 });
